@@ -7,7 +7,7 @@ class Solution:
                 hashmap[player]=[color]
             else:
                 hashmap[player].append(color)
-        print(hashmap)
+        # print(hashmap)
         for i in hashmap:
             hashmap2={}
             for color in hashmap[i]:
@@ -19,9 +19,7 @@ class Solution:
             for val in hashmap2.values():
                 if val>freq:
                     freq=val
-            print(freq)
+            # print(freq)
             if freq>i:
                 count+=1
         return count
-
-        
