@@ -9,13 +9,16 @@ class Solution(object):
         #             count+=1
         #     if count==1:
         #         return num
-        hashmap={}
+        # hashmap={}
+        # for i in range(n):
+        #     if nums[i] in hashmap:
+        #         hashmap[nums[i]]+=1
+        #     else:
+        #         hashmap[nums[i]]=1
+        # for key,val in hashmap.items():
+        #     if val==1:
+        #         return key
+        xor=0
         for i in range(n):
-            if nums[i] in hashmap:
-                hashmap[nums[i]]+=1
-            else:
-                hashmap[nums[i]]=1
-        for key,val in hashmap.items():
-            if val==1:
-                return key
-                
+            xor=xor^nums[i]
+        return xor
