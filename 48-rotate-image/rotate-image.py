@@ -7,7 +7,7 @@ class Solution(object):
                 matrix[i][j],matrix[j][i]=matrix[j][i],matrix[i][j]
         # reversed
         for i in range(n):
-            print(matrix[i])
+            # print(matrix[i])
             matrix[i]=list(reversed(matrix[i]))    
         return matrix
         
