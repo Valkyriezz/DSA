@@ -5,37 +5,19 @@ class Solution(object):
         :rtype: str
         """
         # f f f ans=> f , i[:j]
-
         if not strs:
             return ""
-        w = len(strs[0])
         ans=""
+        curr=strs[0]
         n=len(strs)
-        for i in strs:
-            w = min(w,len(i))
-
-        for i in range(w):
-            ls = []
-            for j in strs:
-                ls.append(j[i])
-            if len(set(ls)) == 1:
-                ans+=ls[0]
-            else:
-                break
-
-                
-                
+        for i in range(len(curr)):
+            char=curr[i]
+            for j in range(1,n):
+                if i>=len(strs[j]) or strs[j][i]!=char:
+                    return ans
+            ans+=char
         return ans
-                
-            
 
-            
-
-
-
-
-
-            
 
 
 
